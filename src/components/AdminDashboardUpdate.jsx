@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { updateFlashcard } from '../apis/Api';
+import {CardSpotlightDemo} from './infoCard/CardSpotlightDemo';
 
 function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
     const [quote, setQuestion] = useState('');
@@ -39,13 +40,13 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
     const [password, setPassword] = useState("");
 
     return (
-        <div>
+        <div className='bg-moonGlow'>
 
             <div className='check flex flex-wrap justify-center items-center'>
                 <div className='h-max w-max'>
-                    <label>Password:</label>
+                    <label className='bg-slate-400'>Password:</label>
                     <input 
-                    q   className='bg-green-300'
+                        className='bg-black'
                         type="password" 
                         required 
                         value={password} 
@@ -62,6 +63,7 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
                     <h2>Update Flashcard</h2>
                     <form onSubmit={handleUpdate}>
                         <input
+                            
                             type="text"
                             value={quote}
                             onChange={(e) => setQuestion(e.target.value)}
@@ -92,7 +94,7 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
 
             ) : (
                 <div className='flex flex-wrap justify-center items-center p-4'>
-                    <h1 className='text-xl bg-red-600 text-center h-max w-max'>You are not the main admin.</h1>
+                    <CardSpotlightDemo />
                 </div>
             )}
 
