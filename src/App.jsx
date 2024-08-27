@@ -11,7 +11,7 @@ import { fetchFlashcards } from './apis/Api';
 import AdminDashboard from './components/AdminDashboard';
 import AdminDashboardDelete from './components/AdminDashboardDelete';
 import AdminDashboardUpdate from './components/AdminDashboardUpdate';
-import {ShootingStarsAndStarsBackgroundDemo} from './components/shootingStarBackground/ShootingStarsAndStarsBackgroundDemo';
+import {FlipWordsDemo} from './components/flipWords/FlipWordsDemo';
 import {MeteorsDemo} from './components/meteorEffect/MeteorsDemo';
 
 function AppContent() {
@@ -39,7 +39,7 @@ function AppContent() {
         <Route path="/Signin" element={<Signin />} />
         <Route path="/Hero" element={<MeteorsDemo />} />
         <Route path="/Flashcard" element={<Flashcard arr={flashcards} />} />
-        <Route path="/AdminDashboard" element={<ShootingStarsAndStarsBackgroundDemo setFlashcards={setFlashcards} />} />
+        <Route path="/AdminDashboard" element={<FlipWordsDemo setFlashcards={setFlashcards} />} />
         <Route path="/AdminDashboardDelete" element={<AdminDashboardDelete flashcards={flashcards} setFlashcards={setFlashcards} />} />
         <Route path="/AdminDashboardUpdate" element={<AdminDashboardUpdate flashcards={flashcards} setFlashcards={setFlashcards} />} />
       </Routes>
