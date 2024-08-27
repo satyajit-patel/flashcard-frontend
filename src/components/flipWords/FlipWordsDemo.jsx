@@ -1,6 +1,8 @@
 import React from "react";
 import { FlipWords } from "./flip-words";
 import { useState } from "react";
+import axios from 'axios';
+
 
 export function FlipWordsDemo({ setFlashcards }) {
   const words = ["Create", "Generate", "Build", "Develop", "Forge", "Craft"];
@@ -25,9 +27,9 @@ export function FlipWordsDemo({ setFlashcards }) {
 
 
   return (
-    (<div className="h-[40rem] flex flex-col justify-center items-center px-4 bg-moonNight">
+    (<div className="h-[40rem] flex flex-col justify-center items-center px-4 bg-slate-200">
       <div
-        className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 bg-slate-400">
+        className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
         Please
         <FlipWords words={words} /> <br />
         informatic content and learn by sharing..
