@@ -40,10 +40,9 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
     const [password, setPassword] = useState("");
 
     return (
-        <div className='bg-moonGlow'>
+        <div className='bg-moonNight h-screen w-screen flex flex-wrap flex-col justify-center items-center gap-4'>
 
-            <div className='check flex flex-wrap justify-center items-center'>
-                <div className='h-max w-max'>
+                <div className='h-max w-max bg-moonGlow'>
                     <label className='bg-slate-400'>Password:</label>
                     <input 
                         className='bg-black'
@@ -54,11 +53,8 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
                         placeholder="Enter admin password"
                     />
                 </div>
-            </div>
 
             {password === `${import.meta.env.VITE_PASS}` ? (
-
-                
                 <div className="admin-dashboard">
                     <h2>Update Flashcard</h2>
                     <form onSubmit={handleUpdate}>
@@ -93,7 +89,7 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
                 </div>
 
             ) : (
-                <div className='flex flex-wrap justify-center items-center p-4'>
+                <div className='h-max w-max bg-moonGlow'>
                     <CardSpotlightDemo />
                 </div>
             )}

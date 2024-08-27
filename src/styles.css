@@ -6,8 +6,8 @@
 }
 
 .flashcard {
-    width: 450px;
-    height: 350px;
+    width: 350px;
+    height: 250px;
     perspective: 1000px; /* 3D view */
     cursor: pointer;
 }

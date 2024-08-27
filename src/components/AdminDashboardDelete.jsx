@@ -11,20 +11,18 @@ function AdminDashboardDelete({ flashcards=[], setFlashcards }) {
     const [password, setPassword] = useState("");
 
     return (
-        <div className='bg-moonNight'>
+        <div className='bg-moonGlow h-screen w-screen flex flex-wrap flex-col gap-4 justify-center items-center'>
 
-            <div className='check flex flex-wrap justify-center items-center'>
-                <div className='h-max w-max'>
-                    <label className='bg-slate-400'>Password:</label>
-                    <input 
-                        className='bg-black'
-                        type="password" 
-                        required 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        placeholder="Enter admin password"
-                    />
-                </div>
+            <div className='h-max w-max bg-moonNight'>
+                <label className='bg-slate-400'>Password:</label>
+                <input 
+                    className='bg-black'
+                    type="password" 
+                    required 
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    placeholder="Enter admin password"
+                />
             </div>
 
             {password === `${import.meta.env.VITE_PASS}` ? (
@@ -46,8 +44,7 @@ function AdminDashboardDelete({ flashcards=[], setFlashcards }) {
                     </div>
                 </div>
             ) : (
-                <div className='flex flex-wrap justify-center items-center p-4'>
-                    {/* <h1 className='text-xl bg-red-600 text-center h-max w-max'>You are not the main admin.</h1> */}
+                <div className='h-max w-max bg-moonNight'>
                     <CardSpotlightDemo />
                 </div>
             )}

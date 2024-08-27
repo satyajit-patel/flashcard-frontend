@@ -24,7 +24,7 @@ function Flashcard({ arr }) {
 
     return (
         <div className='h-screen w-screen flex flex-wrap justify-center items-center bg-moonGlow'>
-            <div className='h-[500px] w-[500px] flex flex-wrap justify-center items-center flex-col'>
+            <div className='flex flex-wrap justify-center items-center flex-col'>
                 <div className={`flashcard ${isFlip ? 'isFlip' : ''}`}>
                     <div className="front">{arr[index].quote}</div>
                     <div className="back">{arr[index].poet}</div>
