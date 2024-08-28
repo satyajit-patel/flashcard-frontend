@@ -27,15 +27,13 @@ export function FlipWordsDemo({ setFlashcards }) {
 
 
   return (
-    (<div className="h-[40rem] flex flex-col justify-center items-center px-4 bg-slate-200">
-      <div
-        className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        Please
-        <FlipWords words={words} /> <br />
-        informatic content and learn by sharing..
-      </div>
-            <div className="admin-dashboard bg-moonGlow h-[250px] w-[450px]">
-                <h2 className='text-slate-400'>Admin Dashboard</h2>
+    (
+            <div className="m-2 p-2 text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+                Please
+                <FlipWords words={words} /> <br />
+                something..
+
+                <div className="admin-dashboard bg-moonGlow">
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
@@ -43,6 +41,7 @@ export function FlipWordsDemo({ setFlashcards }) {
                         onChange={(e) => setQuestion(e.target.value)}
                         placeholder="Question"
                         required
+                        className="bg-moonGlow text-slate-400 h-8 placeholder:text-xl m-1 p-1 text-xl"
                     />
                     <input
                         type="text"
@@ -50,15 +49,18 @@ export function FlipWordsDemo({ setFlashcards }) {
                         onChange={(e) => setAnswer(e.target.value)}
                         placeholder="Answer"
                         required
+                        className="bg-moonGlow  h-8 placeholder:text-xl m-1 p-1 text-xl"
                     />
-                    <button 
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
-                        type="submit"
-                    >
+                    <button className="px-8 py-2 rounded-full relative bg-slate-700 text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+                        <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+                        <span className="relative z-20">
                         Add Flashcard
+                        </span>
                     </button>
                 </form>
             </div>
-    </div>)
+
+            </div>
+    )
   );
 }

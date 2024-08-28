@@ -65,9 +65,8 @@
     margin-top: 50px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #ecf0f1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -96,8 +95,4 @@
 
 .admin-dashboard button {
     align-self: flex-end;
-}
-
-.admin-dashboard button:hover {
-    background-color: #27ae60;
 }

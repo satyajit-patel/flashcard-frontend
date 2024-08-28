@@ -4,23 +4,21 @@ export function CardSpotlightDemo() {
   return (
     (<CardSpotlight className="h-96 w-96">
       <p className="text-xl font-bold relative z-20 mt-2 text-white">
-        {/* Authentication steps */}
         You are not the main admin.
       </p>
       <div className="text-neutral-200 mt-4 relative z-20">
-        {/* Follow these steps to secure your account: */}
-        You can only:
+        Your right's so far:
         <ul className="list-none  mt-2">
           <Step title="Read data" />
           <Step title="Create data" />
-          <Step title="but can't update" />
-          <Step title="but can't delete data" />
+          <Step title="Delete data" />
+          <Step title="Can't Update" />
         </ul>
       </div>
       <p className="text-neutral-300 mt-4 relative z-20 text-sm">
         {/* Ensuring your account is properly secured helps protect your personal
         information and data. */}
-        only Satyajit Patel can update and delete. please don't mind. 
+        only Satyajit Patel can update data. please don't mind. 
         If you have something good questions please add it so that other's can learn either.
       </p>
     </CardSpotlight>)
