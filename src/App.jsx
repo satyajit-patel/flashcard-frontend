@@ -30,19 +30,21 @@ function AppContent() {
   }, [memo, setFlashcards]);
 
   return (
-    <div className='h-screen w-screen flex flex-wrap justify-center items-center'>
+    <div className='h-screen w-screen flex flex-wrap justify-center items-center m-6 p-6'>
       {location.pathname !== "/Signup" && location.pathname !== "/Signin" && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Navigate to="/Signin" />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Signin" element={<Signin />} />
-        <Route path="/Hero" element={<MeteorsDemo />} />
-        <Route path="/SeeAllCards" element={<SeeAllCards arr={flashcards} />} />
-        <Route path="/Flashcard" element={<Flashcard arr={flashcards} />} />
-        <Route path="/AdminDashboard" element={<FlipWordsDemo setFlashcards={setFlashcards} />} />
-        <Route path="/AdminDashboardDelete" element={<AdminDashboardDelete flashcards={flashcards} setFlashcards={setFlashcards} />} />
-        <Route path="/AdminDashboardUpdate" element={<AdminDashboardUpdate flashcards={flashcards} setFlashcards={setFlashcards} />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<Navigate to="/Signin" />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Signin" element={<Signin />} />
+          <Route path="/Hero" element={<MeteorsDemo />} />
+          <Route path="/SeeAllCards" element={<SeeAllCards arr={flashcards} />} />
+          <Route path="/Flashcard" element={<Flashcard arr={flashcards} />} />
+          <Route path="/AdminDashboard" element={<FlipWordsDemo setFlashcards={setFlashcards} />} />
+          <Route path="/AdminDashboardDelete" element={<AdminDashboardDelete flashcards={flashcards} setFlashcards={setFlashcards} />} />
+          <Route path="/AdminDashboardUpdate" element={<AdminDashboardUpdate flashcards={flashcards} setFlashcards={setFlashcards} />} />
+        </Routes>
+      </div>
     </div>
   );
 }

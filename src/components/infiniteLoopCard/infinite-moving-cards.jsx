@@ -4,13 +4,16 @@ import { cn } from "./utils";
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
+
+
+
 export const InfiniteMovingCards = ({
   items,
-  direction = "left",
-  speed = "fast",
+  direction,
+  speed,
+  setFlashcards,
   pauseOnHover = true,
-  className,
-  setFlashcards
+  className
 }) => {
   const containerRef = React.useRef(null);
   const scrollerRef = React.useRef(null);
@@ -59,9 +62,22 @@ export const InfiniteMovingCards = ({
   const deleteFlashcard = async (id) => {
     await axios.delete(`${import.meta.env.VITE_URL_GLOBAL}/todo/todos/${id}`);
   };
+  
+
   const handleDelete = async (id) => {
-    await deleteFlashcard(id);
-    setFlashcards(prevFlashcards => prevFlashcards.filter(fc => fc._id !== id));
+    console.log("idddd is: ", id);
+    if(id) {
+      try {
+        await deleteFlashcard(id);
+        setFlashcards(prevFlashcards => prevFlashcards.filter(fc => fc._id !== id));
+        alert("Data deleted successfully!");
+      } catch(err) {
+        alert("Not deleted");
+        console.log(err.message);
+      }
+    }
+    
+    
   };
 
   return (

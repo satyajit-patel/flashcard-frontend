@@ -28,7 +28,7 @@ export function FlipWordsDemo({ setFlashcards }) {
 
   return (
     (
-            <div className="m-2 p-2 text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+            <div className="bg-gold m-2 p-2 text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
                 Please
                 <FlipWords words={words} /> <br />
                 something..

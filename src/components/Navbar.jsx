@@ -24,8 +24,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+    <div className="fixed top-0 left-0 w-full bg-cobalt shadow-md z-50">
+      <div className="mx-auto flex flex-wrap max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="flex space-x-4">
           <button 
             onClick={handleHome}

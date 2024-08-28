@@ -4,13 +4,15 @@ import { deleteFlashcard } from '../apis/Api';
 import {CardSpotlightDemo} from './infoCard/CardSpotlightDemo';
 import {InfiniteMovingCardsDemo} from './infiniteLoopCard/InfiniteMovingCardsDemo';
 
-function AdminDashboardDelete({ flashcards=[], setFlashcards }) {
-    const handleDelete = async (id) => {
-        await deleteFlashcard(id);
-        setFlashcards(prevFlashcards => prevFlashcards.filter(fc => fc._id !== id));
-    };
-    const [password, setPassword] = useState("");
 
+
+function AdminDashboardDelete({ flashcards=[], setFlashcards }) {
+
+    // const handleDelete = async (id) => {
+    //     await deleteFlashcard(id);
+    //     setFlashcards(prevFlashcards => prevFlashcards.filter(fc => fc._id !== id));
+    // };
+    
     return (
         // <div className='bg-moonGlow h-screen w-screen flex flex-wrap flex-col gap-4 justify-center items-center'>
 
@@ -50,7 +52,7 @@ function AdminDashboardDelete({ flashcards=[], setFlashcards }) {
         //         </div>
         //     )}
         // </div>
-        <div className='h-max w-max bg-moonNight'>
+        <div>
             <InfiniteMovingCardsDemo flashcards={flashcards} setFlashcards={setFlashcards} />
         </div>
 

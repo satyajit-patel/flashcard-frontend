@@ -12,8 +12,8 @@ function Flashcard({ arr }) {
         );
     }
 
-    return (
-        <div>
+    return (     
+        <div className='bg-my_col'>
             <CardHoverEffectDemo projects={arr} />
         </div>
     );

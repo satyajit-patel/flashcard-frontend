@@ -19,6 +19,9 @@ export default {
       colors: {
         moonNight: '#0A0E1A',  // Dark blue, reminiscent of a moonlit night
         moonGlow: '#2A2F45',   // Slightly lighter for contrast
+        cobalt: '#033649',
+        my_col: '#031634',
+        gold: '#EADDCC',
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",

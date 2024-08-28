@@ -11,7 +11,7 @@ export function MeteorsDemo() {
   };
 
   return (
-    (<div className="bg-moonNight h-screen w-screen flex flex-wrap justify-center items-center">
+    (<div className="bg-moonNight h-screen w-screen flex flex-wrap justify-center items-center m-6 p-6">
       <div className=" w-full relative max-w-xs">
         <div
           className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
@@ -33,9 +33,10 @@ export function MeteorsDemo() {
             </svg>
           </div>
 
+          {/* 
           <h1 className="font-bold text-xl text-white mb-4 relative z-50">
             Share and Learn through Flashcards.
-          </h1>
+          </h1> */}
 
           <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
             A flashcard or flash card is a card bearing information on both sides, 

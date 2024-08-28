@@ -1,27 +1,49 @@
 import { CardSpotlight } from "./card-spotlight";
+import React, { useState } from 'react';
+import axios from 'axios';
 
-export function CardSpotlightDemo() {
+export function CardSpotlightDemo({id, quote, poet, setSelectedId, setQuestion, setAnswer}) {
+
+   
+    
+    
+
+
+  const handleEdit = (x, y, z) => {
+      setSelectedId(x);
+      setQuestion(y);
+      setAnswer(z);
+  };
+
+
   return (
-    (<CardSpotlight className="h-96 w-96">
+    (
+    
+          
+    
+    <CardSpotlight className="h-96 w-96 m-2 p-2">
+
+        
+
       <p className="text-xl font-bold relative z-20 mt-2 text-white">
-        You are not the main admin.
+        {quote}
       </p>
-      <div className="text-neutral-200 mt-4 relative z-20">
-        Your right's so far:
-        <ul className="list-none  mt-2">
-          <Step title="Read data" />
-          <Step title="Create data" />
-          <Step title="Delete data" />
-          <Step title="Can't Update" />
-        </ul>
-      </div>
       <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-        {/* Ensuring your account is properly secured helps protect your personal
-        information and data. */}
-        only Satyajit Patel can update data. please don't mind. 
-        If you have something good questions please add it so that other's can learn either.
+        {poet}
       </p>
-    </CardSpotlight>)
+      <p>
+        <button
+          onClick={() => handleEdit(id, quote, poet)}
+          className="p-[3px] relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+          <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+            Select and goto top card
+          </div>
+        </button>
+      </p>
+    </CardSpotlight>
+    
+  )
   );
 }
 
