@@ -24,23 +24,19 @@ const Navbar = () => {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-cobalt shadow-md z-50">
-      <div className="mx-auto flex flex-wrap max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <div className="flex space-x-4">
+    <div className="w-full bg-cobalt shadow-md">
+      <div className="flex flex-wrap justify-evenly">
+        <div className="flex flex-wrap">
           <button 
             onClick={handleHome}
             className="p-[3px] relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
             <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-              Home
+              Flashcard
             </div>
           </button>
         </div>
         <div className="flex space-x-4">
-          <button className="px-4 py-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-            <a href="https://en.wikipedia.org/wiki/Flashcard" target="_blank" rel="Wiki">Wiki</a>
-          </button>
-
           <button 
             onClick={handleCreate}
             className="px-6 py-2 bg-black text-white rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">

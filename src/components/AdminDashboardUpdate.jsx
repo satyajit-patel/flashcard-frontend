@@ -97,7 +97,8 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
         // </div>
 
         <div> 
-            <div className="admin-dashboard">
+            <br />
+            <div className="admin-dashboard bg-cobalt">
             <form onSubmit={handleUpdate}>
                 <input
                     type="text"
@@ -126,7 +127,10 @@ function AdminDashboardUpdate({ flashcards=[], setFlashcards }) {
             {
                 flashcards.map((it, index) => {
                     return (
-                        <CardSpotlightDemo key={index} id={it._id} quote={it.quote} poet={it.poet} setSelectedId={setSelectedId} setQuestion={setQuestion} setAnswer={setAnswer} />
+                        <div>
+                            <br />
+                            <CardSpotlightDemo key={index} id={it._id} quote={it.quote} poet={it.poet} setSelectedId={setSelectedId} setQuestion={setQuestion} setAnswer={setAnswer} />
+                        </div>
                     );
                 })
             }

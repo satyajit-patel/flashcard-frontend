@@ -31,6 +31,7 @@ export function CardSpotlightDemo({id, quote, poet, setSelectedId, setQuestion, 
       <p className="text-neutral-300 mt-4 relative z-20 text-sm">
         {poet}
       </p>
+      <br />
       <p>
         <button
           onClick={() => handleEdit(id, quote, poet)}

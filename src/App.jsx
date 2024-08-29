@@ -30,8 +30,10 @@ function AppContent() {
   }, [memo, setFlashcards]);
 
   return (
-    <div className='h-screen w-screen flex flex-wrap justify-center items-center m-6 p-6'>
+    <div className='h-screen w-screen flex flex-wrap justify-center items-center'>
+        
       {location.pathname !== "/Signup" && location.pathname !== "/Signin" && <Navbar />}
+      
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/Signin" />} />
