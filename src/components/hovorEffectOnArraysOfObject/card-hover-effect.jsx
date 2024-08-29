@@ -34,7 +34,7 @@ export const HoverEffect = ({ items, className }) => {
           </AnimatePresence>
           <Card>
             <CardTitle>{item.quote}</CardTitle>
-            <CardDescription>{item.poet}</CardDescription>
+            {/* <CardDescription>{item.poet}</CardDescription> */}
           </Card>
         </div>
       ))}

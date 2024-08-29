@@ -28,9 +28,9 @@ export function CardSpotlightDemo({id, quote, poet, setSelectedId, setQuestion, 
       <p className="text-xl font-bold relative z-20 mt-2 text-white">
         {quote}
       </p>
-      <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+      {/* <p className="text-neutral-300 mt-4 relative z-20 text-sm">
         {poet}
-      </p>
+      </p> */}
       <br />
       <p>
         <button

@@ -32,7 +32,7 @@ function AppContent() {
   return (
     <div className='h-screen w-screen flex flex-wrap justify-center items-center'>
         
-      {location.pathname !== "/Signup" && location.pathname !== "/Signin" && <Navbar />}
+      {location.pathname !== "/Signup" && location.pathname !== "/Hero" && location.pathname !== "/Signin" && <Navbar />}
       
       <div>
         <Routes>
