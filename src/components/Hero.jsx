@@ -21,8 +21,8 @@ const Hero = () => {
           <h1 className="mb-5 text-5xl font-bold">Flash-Card</h1>
           <p className="mb-5">
           	A flashcard or flash card is a card bearing information on both sides, which is intended to be used as an aid in memorization. 
-		Each flashcard typically bears a question or definition on one side and an answer or target term on the other. 
-		Flashcards are often used to memorize vocabulary, historical dates, formulae or any subject matter that can be learned via a question-and-answer format.
+		        Each flashcard typically bears a question or definition on one side and an answer or target term on the other. 
+		        Flashcards are often used to memorize vocabulary, historical dates, formulae or any subject matter that can be learned via a question-and-answer format.
           	You can "flip" the cards to see the answers and use the "Next" and "Previous" buttons to move through the set.
           </p>
           <button className="btn btn-primary" onClick={handleGetStarted}>Get Started</button>

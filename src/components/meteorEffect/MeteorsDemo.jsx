@@ -39,12 +39,10 @@ export function MeteorsDemo() {
           </h1> */}
 
           <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
-            A flashcard or flash card is a card bearing information on both sides, 
-            which is intended to be used as an aid in memorization. 
-            Each flashcard typically bears a question or definition on one side and an answer or 
-            target term on the other. Flashcards are often used to memorize vocabulary, historical dates, 
-            formulae or any subject matter that can be learned via a question-and-answer format. 
-            Flashcards can be virtual (part of a flashcard software), or physical.
+  A flashcard or flash card is a card bearing information on both sides, which is intended to be used as an aid in memorization. 
+	<br /> Each flashcard typically bears a question or definition on one side and an answer or target term on the other. 
+	<br /> Flashcards are often used to memorize vocabulary, historical dates, formulae or any subject matter that can be learned via a question-and-answer format.
+  <br /> <br /> You can "flip" the cards to see the answers and use the "Next" and "Previous" buttons to move through the set.
           </p>
 
           <button onClick={handleGetStarted} className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
