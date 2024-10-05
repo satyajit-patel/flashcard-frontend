@@ -28,6 +28,9 @@ export default function SignUpFour() {
   const handleSigup = () => {
     navigate('/Signup');
   };
+  const handleGuest = () => {
+    navigate('/Hero');
+  };
 
   return (
     <section className="rounded-md bg-black/80 p-2">
@@ -54,10 +57,16 @@ export default function SignUpFour() {
               href="#"
               title=""
               className="font-medium text-black transition-all duration-200 hover:underline"
-              onClick={handleSigup}
             >
-              <button class="bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:from-green-500 hover:to-blue-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              <br />
+              <button onClick={handleSigup} class="bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:from-green-500 hover:to-blue-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                 RESISTER
+              </button>
+              <button onClick={handleGuest} className="p-[3px] relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                  Guest 
+                </div>
               </button>
             </a>
           </p>
